@@ -1,10 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import Button from './components/Button';
+import Login from './Login'; 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isLoginPage, setIsLoginPage] = useState(false); // estado para cambiar de página
+  const [count, setCount] = useState<number>(0); // estado para contar
+
+  const handleNavigateToLogin = () => {
+    setIsLoginPage(true); // ir a la página de login
+  };
+
+  const handleNavigateToHome = () => {
+    setIsLoginPage(false); // regresar a la página principal
+  };
+
+  if (isLoginPage) {
+    return <Login onBack={handleNavigateToHome} />;
+  }
 
   return (
     <>
@@ -25,11 +40,15 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <Button
+        label="Go to Login"
+        onClick={handleNavigateToLogin}
+      />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
