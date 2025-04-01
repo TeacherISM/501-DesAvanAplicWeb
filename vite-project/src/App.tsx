@@ -1,10 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+
+import Button from './class2/button';
+import Login from './class2/login';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [showLogin, setShowLogin] = useState(false);
+
+  if (showLogin) {
+    return <Login />;
+  }
 
   return (
     <>
@@ -28,8 +36,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Button label="A01028889" onClick={() => setShowLogin(true)} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
