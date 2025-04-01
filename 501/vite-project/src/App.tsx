@@ -2,12 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './class2/a01784568/Button'
+import Login from './class2/a01784568/Login'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [login, setLogin] = useState(false)
 
   return (
     <>
+      <Button onClick={() => setLogin(true)} label = "A01784568"/>
+      
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -28,6 +33,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      {login && (
+        <Login/>
+      )}
     </>
   )
 }
