@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Login from './login'
+import Login from './class2/A01783317/login'
 
 function App() {
   const [count, setCount] = useState(0)
