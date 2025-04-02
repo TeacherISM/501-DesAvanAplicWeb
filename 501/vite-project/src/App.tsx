@@ -2,10 +2,12 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Login from './class2/A01028774/buttonLogin'
+import Login from './class2/A01028774/loginPage.tsx'
+import Button from './class2/A01028774/button.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [showLogin, setShowLogin] = useState(false)
 
   return (
     <>
@@ -19,11 +21,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div>
-        {/* botton que redirecciona a la pagina de login */}
-        <a href="/class2/A01028774/buttonLogin.tsx">
-          <button>Login</button>
-        </a>
+        <Button label="Login" onClick={() => setShowLogin(true)} />
+        <Button label="Exit" onClick={() => setShowLogin(false)} />
       </div>
+      {showLogin && <Login />}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

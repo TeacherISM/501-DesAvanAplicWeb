@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import InputField from '.InputField';
-import Button from './Button';
+import InputField from './inputFile';
+import Button from './button';
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
-  const handleSubmit = (): void => {
+  const handleSubmit = () => {
     console.log('Username:', username);
     console.log('Password:', password);
   };
