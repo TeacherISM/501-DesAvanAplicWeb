@@ -5,7 +5,7 @@ import './App.css'
 import Login from './class2/A01028774/loginPage.tsx'
 import Button from './class2/A01028774/button.tsx'
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
   const [showLogin, setShowLogin] = useState(false)
 
@@ -19,15 +19,18 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>{`Vite + React`}</h1>
+
+      {/* Arrow functions */}
       <div>
         <Button label="Login" onClick={() => setShowLogin(true)} />
         <Button label="Exit" onClick={() => setShowLogin(false)} />
       </div>
       {showLogin && <Login />}
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        {/* Arrow functions */}
+        <button onClick={() => setCount((prevCount) => prevCount + 1)}>
+          {`count is ${count}`}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
