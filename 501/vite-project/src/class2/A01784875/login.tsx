@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import InputField from './components/InputField';
-import Button from './components/Button';
+import InputField from '../../class3/A01784875/components/InputField';
+import Button from '../../class3/A01784875/components/Button';
 
 // Define types for state variables
 const Login = () => {
