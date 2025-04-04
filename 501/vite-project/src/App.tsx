@@ -4,7 +4,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Login from './Class2/A01783317/login'
-import GreetPage from './class1/A01783317/GreetButton'; // Import the GreetPage component
+import GreetPage from './class1/A01783317/GreetButton';
+ // Import the GreetPage component
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,12 +38,11 @@ function App() {
               <p className="read-the-docs">
                 Click on the Vite and React logos to learn more
               </p>
-              <Link to="/greet">
-                <button className="greet-button"> Come say Hello! </button>
-              </Link>
-              <Link to="/login">
-                <button className="login-button">Domingo M. Login</button>
-              </Link>
+              <div className="app-home">
+              <a href="/landing.html">
+                <button className="name-button">Domingo</button>
+              </a>
+            </div>
             </>
           }
         />
