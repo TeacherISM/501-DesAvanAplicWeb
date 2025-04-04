@@ -1,21 +1,15 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-//botton
 import Button from './class2/Components/button';
+import Login from './class2/Pages/log_in';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
   const [count, setCount] = useState(0);
-  const navigate = useNavigate(); // Inicializa el hook useNavigate
-
-  const handleLoginClick = () => {
-    navigate('/login'); // Redirige a la ruta /login
-  };
-
-  return (
+  return currentPage === 'home' ? (
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -31,19 +25,15 @@ function App() {
           <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
           </button>
-
-          {/* Cambia el onClick para redirigir al login */}
-          <Button label="Log in" onClick={handleLoginClick} />
+          <Button label="Log in" onClick={() => setCurrentPage('login')} />
         </div>
-
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
+  ) : (
+    <Login />
   );
 }
 
