@@ -22,6 +22,9 @@ function App() {
           </div>
           <h1>Vite + React</h1>
           <button onClick={() => setPage("login")}>LOGIN DE A01027893</button>
+          <button>
+            <a href={'src/class2/A01027893/login.html'} className='button-link'>HOLA</a>
+          </button>
           <div className="card">
             <button onClick={() => setCount((count) => count + 1)}>
               count is {count}
