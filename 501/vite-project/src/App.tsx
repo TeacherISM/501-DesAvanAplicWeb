@@ -2,9 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Login from './class2/pages/Login'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [showLogin, setShowLogin] = useState(false)
+
+  if (showLogin) {
+    return <Login />
+  }
 
   return (
     <>
@@ -24,6 +30,14 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
+      </div>
+      <div className="card">
+        <button 
+          onClick={() => setShowLogin(true)}
+          style={{ backgroundColor: '#4CAF50', color: 'white', marginTop: '20px' }}
+        >
+          A01028033's Login Button!
+        </button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
