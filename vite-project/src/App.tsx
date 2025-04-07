@@ -2,8 +2,6 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Button from './components/Button'
-import HandlePaths from './components/Router';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,7 +25,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <a href='C:\Users\gilbe\Documents\Programas\Planta\501-DesAvanAplicWeb\vite-project\src\class2\Home.html'>xd</a>
+      <a href={'../A01027920/Home.html'} className='buttonlink'>Go to Home</a>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

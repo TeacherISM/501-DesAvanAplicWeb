@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import InputField from '../components/InputField';
-import Button from '../components/Button';
+import InputField from './InputField';
+import Button from './Button';
 
-const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+const LoginPage: React.FC = () => {
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   const handleSubmit = () => {
     console.log('Username:', username);
@@ -18,13 +18,17 @@ const LoginPage = () => {
         type="text"
         placeholder="Username"
         value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setUsername(e.target.value)
+        }
       />
       <InputField
         type="password"
         placeholder="Password"
         value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setPassword(e.target.value)
+        }
       />
       <Button label="Submit" onClick={handleSubmit} />
     </div>
