@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <button onclick="window.location.href='../src/class1/A01027920/arrowfun.tsx'">Go to Arrow Function Demo</button>
+  <h1>Welcome to the Home Page</h1>
+  <button onclick="goToLoginPage()">Go to Login Page</button>
+
+  <script>
+    function goToLoginPage() {
+      window.location.href = './LoginPage.html';
+    }
+  </script>
 </body>
 </html>
