@@ -26,9 +26,9 @@ const GreetPage: React.FC = () => {
         />
         <button onClick={handleGreet}>Greet Me</button>
         {greeting && <p className="greeting-message">{greeting}</p>}
-        <Link to="/">
+        <a href="/landing.html">
           <button>Return</button>
-        </Link>
+        </a>
       </div>
     </div>
   );

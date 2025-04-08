@@ -40,7 +40,7 @@ function App() {
               </p>
               <div className="app-home">
               <a href="/landing.html">
-                <button className="name-button">Domingo</button>
+                <button className="name-button">Domingo Mora</button>
               </a>
             </div>
             </>
