@@ -1,0 +1,82 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 100vh;
+    margin: 0;
+    justify-content: flex-start;
+  }
+  
+  .Bar {
+    width: 100%;
+    background-color: #915ead;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .Menu {
+    margin-top: 120px;
+    width: 100%;
+    padding: 30px;
+    background-color: #d1d1d1;
+    text-align: center;
+    border-radius: 30px;
+  }
+  
+  .Menu h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .Activities {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: #915ead;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Activities a {
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    width: fit-content;
+    color: #915ead;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .Activities a:hover {
+    background-color: #d9d1e0;
+    transform: scale(1.05);
+  }
+  
+  .Activities h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  

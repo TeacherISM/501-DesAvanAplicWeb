@@ -1,21 +1,9 @@
-import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import nana from './assets/nana.jpg';
 import './App.css';
-import Login from './class3/A01784875/login';
 
 function App() {
-  const [isLoginPage, setIsLoginPage] = useState(false);
-
-  const handleLoginClick = () => {
-    setIsLoginPage(true);
-  };
-
-  if (isLoginPage) {
-    return <Login />;
-  }
-
   return (
     <>
       <div>
@@ -28,8 +16,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <a href="../A01784875/login" target="_blank">
-          <img src={nana} className="logo react" alt="A01784875" />
+        <a href="../public/A01784875/index.html" target="_blank">
+          <img src={nana} style = {{borderRadius : 100, width:100, height: 100}} alt="A01784875" />
         </a>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
