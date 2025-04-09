@@ -1,12 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+
+import Button from './class2/Components/button';
+import Login from './class2/Pages/log_in';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+  const [currentPage, setCurrentPage] = useState('home');
+  const [count, setCount] = useState(0);
+  return currentPage === 'home' ? (
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -18,18 +21,20 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <div className="botton-container">
+          <button onClick={() => setCount((count) => count + 1)}>
+            count is {count}
+          </button>
+          <Button label="Log in" onClick={() => setCurrentPage('login')} />
+        </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  ) : (
+    <Login />
+  );
 }
 
-export default App
+export default App;
