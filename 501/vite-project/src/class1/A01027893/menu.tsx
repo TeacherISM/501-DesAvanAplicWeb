@@ -16,7 +16,7 @@ function Menu() {
         </a>
       </button>
       <button>
-        <a href="http://localhost:5173/src/class3/A01027893/implementation.html" className="menu-button">
+        <a href="http://localhost:5173/src/class3/A01027893/staircase.html" className="menu-button">
           UseReduce - Clase3
         </a>
       </button>

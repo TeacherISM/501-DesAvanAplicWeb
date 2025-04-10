@@ -5,12 +5,10 @@ const Arrow = () => {
 
   const total_pokemons = 500;
 
-  // Function to get a random number
   const getRandom = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
-  // Function to fetch Pokémon data
   const fetchPokemonData = (id: number) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((response) => response.json())
@@ -23,7 +21,6 @@ const Arrow = () => {
       });
   };
 
-  // Function to handle the click and load a random Pokémon
   const displayPokemonCard = () => {
     const id = getRandom(1, total_pokemons);
     fetchPokemonData(id);
@@ -38,10 +35,8 @@ const Arrow = () => {
           <div className="card">
             <img src={pokemon.url} alt={pokemon.name} />
             <br />
-            <label>{pokemon.name}</label> <br />
-            <a href={`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`} target="_blank" rel="noopener noreferrer">
-              View more...
-            </a>
+            <br />
+            <label><b>{pokemon.name.toUpperCase()}</b></label>
           </div>
         )}
       </div>
