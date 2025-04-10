@@ -1,10 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [showLogin, setShowLogin] = useState(false);
+
+  if (showLogin) {
+    return <Login />;
+  }
 
   return (
     <>
@@ -25,11 +30,16 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <div className="card">
+        <a href="/public/A01028033/menu/milestoneMenu.html">
+          <button>A01028033's Menu Button!</button>
+        </a>
+      </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
