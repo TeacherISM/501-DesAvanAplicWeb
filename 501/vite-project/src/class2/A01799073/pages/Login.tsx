@@ -2,6 +2,7 @@ import { useState } from 'react';
 import InputField from '../components/InputFIeld';
 import Button from '../components/Buttons';
 import { useNavigate } from 'react-router-dom';
+import BackToMenu from '../../../components/BackMenu';
 
 
 interface LoginProps {
@@ -45,6 +46,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
       </div>
     </div>
   );
+  <BackToMenu/>
 };
 
 export default Login;
