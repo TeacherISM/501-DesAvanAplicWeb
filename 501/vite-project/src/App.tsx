@@ -2,15 +2,12 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Login from "./class2/A01027893/login.tsx";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [page, setPage] = useState("home");
 
   return (
     <div>
-      {page === "home" && (
         <div>
           <div>
             <a href="https://vite.dev" target="_blank">
@@ -21,10 +18,9 @@ function App() {
             </a>
           </div>
           <h1>Vite + React</h1>
-          <button onClick={() => setPage("login")}>LOGIN DE A01027893</button>
-          <button>
-            <a href={'src/class2/A01027893/login.html'} className='button-link'>HOLA</a>
-          </button>
+            <a href='src/class1/A01027893/menu.html' className="menu-button">
+              MENÚ DE A01027893
+            </a>
           <div className="card">
             <button onClick={() => setCount((count) => count + 1)}>
               count is {count}
@@ -37,9 +33,6 @@ function App() {
             Click on the Vite and React logos to learn more
           </p>
         </div>
-      )}
-
-      {page === "login" && <Login />}
     </div>
   );
 }
