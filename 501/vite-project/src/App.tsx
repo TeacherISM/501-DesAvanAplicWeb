@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react';
+import React from 'react';
+import './App.css';
+import Button from './class2/a01783060/Button';
+import Login from './class2/a01783060/Login';
+import TravelRequestForm from './class3/a01783060/TravelRequestForm';
+
+type View = 'home' | 'menu' | 'login' | 'travel';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [view, setView] = useState<View>('home');
 
-  return (
-    <>
+  useEffect(() => {
+    const htmlView = document.documentElement.getAttribute('data-view') as View;
+    if (htmlView === 'login' || htmlView === 'travel' || htmlView === 'menu') {
+      setView(htmlView);
+    }
+  }, []);
+
+  if (view === 'home') {
+    return (
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Milestone 1</h1>
+        <Button label="Ir al Menú" onClick={() => setView('menu')} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+    );
+  }
+
+  if (view === 'menu') {
+    return (
+      <div>
+        <h1>Menú Principal</h1>
+        <Button label="Ir a Login" onClick={() => window.location.href = '/public/A01783060/login.html'} />
+        <Button label="Ir a Travel Request" onClick={() => window.location.href = '/public/A01783060/travel.html'} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    );
+  }
+
+  if (view === 'login') {
+    return (
+      <Login onBack={() => window.location.href = '/public/A01783060/menu.html'} />
+    );
+  }
+
+  if (view === 'travel') {
+    return (
+      <TravelRequestForm onBack={() => window.location.href = '/public/A01783060/menu.html'} />
+    );
+  }
+
+  return null;
 }
 
-export default App
+export default App;
