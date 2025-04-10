@@ -2,7 +2,7 @@
 import Counter from "./components/counterUseState";
 import Posts from "./components/posts";
 import CounterWithReducer from "./components/reducerExample";
-import "/src/App.css";
+import "/src/A01028033/styles.css";
 
 const App: React.FC = () => {
   return (

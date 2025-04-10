@@ -1,6 +1,6 @@
 // Script with the activities of class 1
 import { useState } from "react";
-import "/src/App.css";
+import "/src/A01028033/styles.css";
 
 const Class1 = () => {
   const [isLarge, setIsLarge] = useState(false);
