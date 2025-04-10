@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-// imports from my files
+// Imports from class files
 import RenderImage from './class1/A01784217/class1';
 import { Button, Login } from './class2/A01784217/class2';
 import Class3 from './class3/A01784217/class3';
@@ -44,9 +44,15 @@ function App() {
                     <p className="read-the-docs">
                         Click on the Vite and React logos to learn more
                     </p>
+                    <br />
                     <div>
-                        <h5>Photo rendered by arrow function:</h5>
-                        <RenderImage />
+                        <h5>Photo rendered with an arrow function:</h5>
+                        <RenderImage 
+                            src="https://i.pinimg.com/736x/61/56/1a/61561ac8460bc39acd0e751e5cad7b4d.jpg" 
+                            alt="dog" 
+                            width="200px" 
+                            height="200px" 
+                        />
                     </div>
                     <br />
                     <div>

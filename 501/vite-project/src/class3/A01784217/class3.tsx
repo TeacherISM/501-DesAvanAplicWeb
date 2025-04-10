@@ -1,3 +1,9 @@
+/*
+* Nicole Dávila Hernández
+* A01784217
+* Class 3 - useReducer hook implementation
+*/
+
 import React, { useReducer } from 'react';
 import { Button } from '../../class2/A01784217/class2'; 
 
@@ -23,10 +29,10 @@ const Class3: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             <h2>Counter</h2>
             <p>Count: {state.count}</p>
             <button onClick={() => dispatch({ type: 'increase' })} style={{ margin: '5px' }}>
-                increase
+                +
             </button>
             <button onClick={() => dispatch({ type: 'decrease' })} style={{ margin: '5px' }}>
-                decrease
+                -
             </button>
             <button onClick={() => dispatch({ type: 'reset' })} style={{ margin: '5px' }}>
                 Reset
