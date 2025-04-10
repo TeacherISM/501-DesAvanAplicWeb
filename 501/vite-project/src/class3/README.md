@@ -69,7 +69,7 @@ function UserData() {
       // Cancel any pending requests
     };
   }, []); // Empty array means this effect runs once after initial render
-
+//Carga las funciones/componentes dependientes
   if (loading) return <div>Loading...</div>;
   
   return (
