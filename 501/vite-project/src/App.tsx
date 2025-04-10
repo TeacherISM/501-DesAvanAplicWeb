@@ -27,7 +27,7 @@ const App = () => {
       <h2>{`Milestone`}</h2>
       <div>
         <a href="/public/A01028774/menu.html">
-          <button>Menu de las clases</button>
+          <button>Menú de las clases</button>
         </a>
       </div>
       <p className="read-the-docs">
