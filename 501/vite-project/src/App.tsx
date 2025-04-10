@@ -21,7 +21,7 @@ function App() {
       <div className="card">
         <div className="botton-container">
           <button onClick={handleRedirect}>
-            Ir a la página HTML
+            A01027743
         </button>
         </div>
         <p>

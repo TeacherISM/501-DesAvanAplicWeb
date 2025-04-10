@@ -50,13 +50,12 @@ body {
     margin: 8px 0;
   }
 
-
   .back-to {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: rgb(70, 83, 220);
-    color: white;
+    background-color:rgb(45, 52, 123);
+    color: rgb(155, 159, 209);
     padding: 10px 16px;
     border: none;
     border-radius: 8px;
@@ -67,8 +66,7 @@ body {
   }
   
   .back-to:hover {
-    background-color: rgb(84, 99, 255);
+    background-color:  rgb(155, 159, 209);
+    color: rgb(45, 52, 123);
   }
-
-
   
