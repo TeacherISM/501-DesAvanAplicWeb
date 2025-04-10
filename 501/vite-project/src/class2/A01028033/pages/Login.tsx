@@ -1,14 +1,16 @@
-import React, { useState, ChangeEvent } from 'react';
-import InputField from '../components/InputField';
-import Button from '../components/Button';
+import React, { useState, ChangeEvent } from "react";
+import InputField from "../components/InputField";
+import Button from "../components/Button";
+import "/src/index.css";
+import "/src/App.css";
 
 const Login: React.FC = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    console.log('Username:', username);
-    console.log('Password:', password);
+    console.log("Username:", username);
+    console.log("Password:", password);
   };
 
   const handleUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +22,14 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "20px",
+      }}
+    >
       <h1>Login</h1>
       <InputField
         type="text"
@@ -35,6 +44,13 @@ const Login: React.FC = () => {
         onChange={handlePasswordChange}
       />
       <Button label="A01028033's Submit" onClick={handleSubmit} />
+      <h5></h5>
+      <Button
+        label="Return to menu"
+        onClick={() =>
+          (window.location.href = "/public/A01028033/menu/milestoneMenu.html")
+        }
+      />
     </div>
   );
 };
