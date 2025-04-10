@@ -5,6 +5,29 @@
   text-align: center;
 }
 
+#class1Div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  display: block;
+  margin: 10px 0;
+  padding: 0.5em;
+  width: 250px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

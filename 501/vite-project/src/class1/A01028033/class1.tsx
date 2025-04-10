@@ -22,7 +22,7 @@ const Class1 = () => {
   const { name, phone, preferredFood } = formData;
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <div id="class1Div">
       <h2>Class 1</h2>
 
       <img
@@ -36,32 +36,35 @@ const Class1 = () => {
           transition: "0.3s ease",
         }}
       />
+      <h2>Click the image!</h2>
 
       <form style={{ marginTop: "20px" }}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={name}
-          onChange={handleChange}
-          style={{ display: "block", margin: "10px 0" }}
-        />
-        <input
-          type="text"
-          name="phone"
-          placeholder="Phone Number"
-          value={phone}
-          onChange={handleChange}
-          style={{ display: "block", margin: "10px 0" }}
-        />
-        <input
-          type="text"
-          name="preferredFood"
-          placeholder="Preferred Food"
-          value={preferredFood}
-          onChange={handleChange}
-          style={{ display: "block", margin: "10px 0" }}
-        />
+        <div className="form-container">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={name}
+            onChange={handleChange}
+            className="form-input"
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            value={phone}
+            onChange={handleChange}
+            className="form-input"
+          />
+          <input
+            type="text"
+            name="preferredFood"
+            placeholder="Preferred Food"
+            value={preferredFood}
+            onChange={handleChange}
+            className="form-input"
+          />
+        </div>
       </form>
 
       {name && phone && preferredFood && (
