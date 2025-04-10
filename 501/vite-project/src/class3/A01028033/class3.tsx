@@ -23,6 +23,9 @@ const App: React.FC = () => {
         <h2>3. useReducer Example</h2>
         <CounterWithReducer />
       </section>
+      <a href="/public/A01028033/menu/milestoneMenu.html">
+        <button>Back to menu</button>
+      </a>
     </div>
   );
 };
