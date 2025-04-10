@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Páginas de cada clase
@@ -16,6 +16,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<VitePage />} />
         <Route path="/menu" element={<Menu/>} />
+        
         <Route path="/login" element={<Login onLogin={() => console.log('Usuario autenticado')} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/counter" element={<Counter />} />

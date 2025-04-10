@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import InputField from '../../../class2/A01799073/components/InputFIeld';
 import Button from '../../../class2/A01799073/components/Buttons';
