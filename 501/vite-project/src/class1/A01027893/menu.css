@@ -1,0 +1,58 @@
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f9fafb;
+margin: 0;
+padding: 0;
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+gap: 20px;
+}
+
+h1 {
+font-size: 2rem;
+color: #1f2937;
+margin-bottom: 20px;
+}
+
+button {
+border: none;
+background: none;
+padding: 0;
+}
+
+.menu-button {
+display: inline-block;
+padding: 12px 20px;
+background-color: #3b82f6;
+color: white;
+font-size: 16px;
+font-weight: 500;
+text-decoration: none;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: background-color 0.25s, transform 0.2s;
+}
+
+.back-button {
+display: inline-block;
+padding: 12px 20px;
+background-color: #000111;
+color: white;
+font-size: 16px;
+font-weight: 500;
+text-decoration: none;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: background-color 0.25s, transform 0.2s;
+}
+
+.menu-button:hover {
+background-color: #2563eb;
+transform: scale(1.05);
+}
