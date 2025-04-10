@@ -72,6 +72,9 @@ const Class1 = () => {
           {`Hello, ${name}! Your phone number ${phone} was registered in your order for ${preferredFood}.`}
         </p>
       )}
+      <a href="/public/A01028033/menu/milestoneMenu.html">
+        <button>Back to menu</button>
+      </a>
     </div>
   );
 };
