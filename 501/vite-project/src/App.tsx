@@ -2,17 +2,47 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Button from './class2/a01784568/Button'
-import Login from './class2/a01784568/Login'
+import Login from './class2/A01784568/Login'
+import TravelRequest from './class3/A01784568/TravelRequest'
+
+type View = 'home' | 'menu' | 'login' | 'travelRequest';
 
 function App() {
   const [count, setCount] = useState(0)
-  const [login, setLogin] = useState(false)
+  const [view, setView] = useState<View>('home');
+
+  if (view === 'menu') {
+    return(
+      <>
+      <h1>Menu</h1>
+      <button onClick = {()=> setView('login')}>Login</button>
+      <button onClick = {()=> setView('travelRequest')}>Travel request</button>      
+      </>
+    )
+  }
+
+  if (view === 'login') {
+    return(
+      <>
+      <Login/>
+      <button onClick={() => setView('menu')}>Regresar</button>
+        
+      
+      </>
+    )
+  }
+
+  if (view === 'travelRequest') {
+    return(
+      <>
+      <TravelRequest/>
+      <button onClick={() => setView('menu')}>Volver al Menú</button>
+      </>
+    )
+  }
 
   return (
     <>
-      <Button onClick={() => setLogin(true)} label = "A01784568"/>
-      
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -29,13 +59,11 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
+        <button onClick={() => setView('menu')}>Diego Valencia Moreno</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      {login && (
-        <Login/>
-      )}
     </>
   )
 }
