@@ -1,15 +1,13 @@
-import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-import Button from './class2/Components/button';
-import Login from './class2/Pages/log_in';
-
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-  const [count, setCount] = useState(0);
-  return currentPage === 'home' ? (
+  const handleRedirect = () => {
+    window.location.href = '/A01027743/menu.html';
+  };
+
+  return (
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -22,18 +20,15 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <div className="botton-container">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <Button label="Log in" onClick={() => setCurrentPage('login')} />
+          <button onClick={handleRedirect}>
+            Ir a la página HTML
+        </button>
         </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
     </>
-  ) : (
-    <Login />
   );
 }
 
