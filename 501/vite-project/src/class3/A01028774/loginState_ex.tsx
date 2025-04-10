@@ -24,16 +24,22 @@ const Login: React.FC = () => {
     <div>
       <h1>Login</h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      <div>
+      Nombre:
       <InputField
               type="text"
               placeholder="Username"
               value={username}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)} name={''}      />
+      </div>
+      <div>
+      Contraseña:
       <InputField
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} name={''}      />
+      </div>
       <Button
         label={loading ? 'Loading...' : 'Submit'}
         onClick={handleSubmit}

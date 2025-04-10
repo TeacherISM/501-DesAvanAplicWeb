@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "./loginPage";
-
+import "./class2.css";
+import '../../index.css'
 
 function Class2() {
   return (
@@ -11,7 +12,7 @@ function Class2() {
       </div>
       <h1></h1>
       <div>
-      <a href="/"> <button>Inicio</button></a> <a href="/menu/menu.html"><button>Menu</button></a>
+      <a href="/"> <button>Inicio</button></a> <a href="/public/A01028774/menu.html"><button>Menu</button></a>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ const Counter: React.FC = () => {
       <p>Count: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
       <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(Math.floor(Math.random() * 100))}>Random</button>
     </div>
   );
 };

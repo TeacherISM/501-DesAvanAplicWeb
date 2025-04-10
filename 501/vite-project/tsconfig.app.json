@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "public/A01028774/class1.tsx", "src/class1/A01028774/class1Reader.tsx"]
+  "include": ["src", "public/A01028774/class1.tsx", "src/class1/A01028774/class1Render.tsx"]
 }

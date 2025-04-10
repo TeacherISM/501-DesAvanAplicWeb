@@ -34,7 +34,7 @@ function arrowfunction() {
         return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
             <img
-            src={isToggled ? "src/images/kirlia.png" : "src/images/Ralts.png"}
+            src={isToggled ? "/src/A01028774images/kirlia.png" : "/src/A01028774images/Ralts.png"}
             alt="Toggle"
             className="w-64 h-64 cursor-pointer rounded shadow-lg transition duration-300 ease-in-out"
             onClick={handleClick}

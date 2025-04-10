@@ -19,8 +19,12 @@ const Login: React.FC = () => {
   return (
     <div>
       <h1>Login</h1>
-      <InputField type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} />
-      <InputField type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
+      <div>
+        Nombre:<InputField type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} />
+      </div>
+      <div>
+        Contraseña:<InputField type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
+      </div>
       <Button label="Submit" onClick={handleSubmit} />
     </div>
   );

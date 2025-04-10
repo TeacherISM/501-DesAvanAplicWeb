@@ -2,7 +2,8 @@ import React from "react";
 import Counter from "./countuseState_ex";
 import Login from "./loginState_ex";
 import TravelRequestForm from "./travelReducer_ex"; 
-
+import "./class3.css";
+import '../../index.css'
 
 function Class3() {
   return (
@@ -27,7 +28,7 @@ function Class3() {
       </div>
       <h1></h1> 
       <div>
-      <a href="/"> <button>Inicio</button></a> <a href="/menu/menu.html"><button>Menu</button></a>
+      <a href="/"> <button>Inicio</button></a> <a href="/public/A01028774/menu.html"><button>Menu</button></a>
       </div>
     </div>
   );

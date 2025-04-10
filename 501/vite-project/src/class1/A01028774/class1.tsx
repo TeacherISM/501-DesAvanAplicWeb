@@ -4,6 +4,7 @@ import React from "react";
 import ArrowFunction from "./arrowfunctions_ex";
 import Destructuring from "./destructuring_ex";
 import TemplateLiterals from "./templateliterals_ex";
+import "./class1.css";
 
 function Class1() {
   return (
@@ -27,7 +28,7 @@ function Class1() {
       </div>
       <h1></h1>
       <div>
-      <a href="/"> <button>Inicio</button></a> <a href="/menu/menu.html"><button>Menu</button></a>
+      <a href="/"> <button>Inicio</button></a> <a href="/public/A01028774/menu.html"><button>Menu</button></a>
       </div>
     </div>
   );
