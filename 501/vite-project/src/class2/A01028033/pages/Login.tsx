@@ -1,3 +1,4 @@
+// Script with the activities and components for class 2
 import React, { useState, ChangeEvent } from "react";
 import InputField from "../components/InputField";
 import Button from "../components/Button";

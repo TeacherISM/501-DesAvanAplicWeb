@@ -1,3 +1,4 @@
+// Script with the activities of class 1
 import { useState } from "react";
 import "/src/App.css";
 

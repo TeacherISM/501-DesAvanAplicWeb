@@ -1,0 +1,30 @@
+// Script with the class3 activities and components
+import Counter from "./components/counterUseState";
+import Posts from "./components/posts";
+import CounterWithReducer from "./components/reducerExample";
+import "/src/App.css";
+
+const App: React.FC = () => {
+  return (
+    <div id="root">
+      <h1>Class 3 (Hooks)</h1>
+
+      <section style={{ marginBottom: "40px" }}>
+        <h2>1. useState Example</h2>
+        <Counter />
+      </section>
+
+      <section style={{ marginBottom: "40px" }}>
+        <h2>2. useEffect Example (Data Fetching)</h2>
+        <Posts />
+      </section>
+
+      <section>
+        <h2>3. useReducer Example</h2>
+        <CounterWithReducer />
+      </section>
+    </div>
+  );
+};
+
+export default App;
