@@ -13,6 +13,7 @@ const Login: React.FC = () => {
   const handleSubmit = () => {
     console.log("Username:", formData.username);
     console.log("Password:", formData.password);
+    alert("Login successful!");
   };
 
   return (
