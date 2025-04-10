@@ -1,11 +1,9 @@
-import ReactDOM from 'react-dom/client';
-import LoginPage from './LoginPage'; // Import your LoginPage component
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import Login from './LoginPage'
 
-const loginRoot = document.getElementById('login-root');
-
-if (loginRoot) {
-  const root = ReactDOM.createRoot(loginRoot);
-  root.render(<LoginPage />);
-} else {
-  console.error('Could not find root element with id "login-root"');
-}
+createRoot(document.getElementById('login-root')!).render(
+  <StrictMode>
+    <Login />
+  </StrictMode>,
+)

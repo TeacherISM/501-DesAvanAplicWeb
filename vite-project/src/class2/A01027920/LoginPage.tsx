@@ -1,41 +1,28 @@
-import React, { useState } from 'react';
-import InputField from './InputField';
-import Button from './Button';
+import { useState } from "react";
+import InputField from "./InputField";
+import Button from "./Button";
 
-const LoginPage: React.FC = () => {
-  const [username, setUsername] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-
-  const handleSubmit = () => {
-    console.log('Username:', username);
-    console.log('Password:', password);
-    if (username == 'user' && password == 'password') {
-      window.location.href = "../../public/A01027920/SuccessfilLogin.html";
-    }
-  };
+function Login() {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
-    <div>
-      <h1>Login</h1>
-      <InputField
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setUsername(e.target.value)
-        }
-      />
-      <InputField
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setPassword(e.target.value)
-        }
-      />
-      <Button label="Submit" onClick={handleSubmit} />
-    </div>
+    <>
+          <h1>Login</h1>
+          <InputField
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <InputField
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+    </>
   );
-};
+}
 
-export default LoginPage;
+export default Login;

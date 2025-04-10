@@ -1,14 +1,18 @@
 import React from 'react';
 
-// InputField Component
 interface InputFieldProps {
   type: string;
-  placeholder?: string;
+  placeholder: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, onChange }) => {
+export const InputField: React.FC<InputFieldProps> = ({
+  type,
+  placeholder,
+  value,
+  onChange,
+}) => {
   return (
     <input
       type={type}
@@ -20,4 +24,3 @@ const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, onCha
   );
 };
 
-export default InputField;
