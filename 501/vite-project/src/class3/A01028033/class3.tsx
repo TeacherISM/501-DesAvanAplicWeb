@@ -16,6 +16,7 @@ const App: React.FC = () => {
 
       <section style={{ marginBottom: "40px" }}>
         <h2>2. useEffect Example (Data Fetching)</h2>
+        <p>Fetching data from the mockAPI JSONPlaceholder.</p>
         <Posts />
       </section>
 
