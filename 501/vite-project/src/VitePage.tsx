@@ -1,12 +1,17 @@
 import { useState } from 'react'
-import reactLogo from '../../../assets/react.svg'
+import { useNavigate } from 'react-router-dom';
+import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import '../../../App.css'
+import Button from './class2/A01799073/components/Buttons'
+import './App.css'
 
-const VitePage: React.FC = () => {
-  const [count, setCount] = useState(0);
+function VitePage() {
+  const [count, setCount] = useState(0)
+  const navigate = useNavigate(); // ⬅️ esto es clave
 
-
+  const handleClick = () => {
+    navigate('/menu'); 
+  }
   return (
     <>
       <div>
@@ -22,6 +27,8 @@ const VitePage: React.FC = () => {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+
+        <Button label="A01799073" onClick={handleClick}/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -33,4 +40,4 @@ const VitePage: React.FC = () => {
   )
 }
 
-export default VitePage
+export default VitePage;
