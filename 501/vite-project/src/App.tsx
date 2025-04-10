@@ -32,7 +32,7 @@ function App() {
         </p>
       </div>
       <div className="card">
-        <a href="/A01028033/menu/milestoneMenu.html">
+        <a href="/public/A01028033/menu/milestoneMenu.html">
           <button>A01028033's Menu Button!</button>
         </a>
       </div>
