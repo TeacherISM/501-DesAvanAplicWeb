@@ -3,8 +3,14 @@ import InputField from "./InputField";
 import Button from "./Button";
 
 function Login() {
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleSubmit = () => {
+    if (username == "xd" && password == "xd") {
+      window.location.href = "./SuccessfulLogin.html";
+    }
+  };
 
   return (
     <>
@@ -12,8 +18,8 @@ function Login() {
           <InputField
             type="text"
             placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <InputField
             type="password"
@@ -21,6 +27,8 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <Button label="Submit" onClick={handleSubmit}/>
+          <a href={'/A01027920/Home.html'} className='buttonlink'>Go to Home</a>
     </>
   );
 }

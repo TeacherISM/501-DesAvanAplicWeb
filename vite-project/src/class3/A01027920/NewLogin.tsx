@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import InputField from '../../class2/A01027920/InputField';
 import Button from '../../class2/A01027920/Button';
+import TravelRequestForm from './TravelRequest';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [logedin, setLogin] = useState(false);
 
   const handleSubmit = () => {
     setLoading(true);
@@ -14,6 +16,7 @@ const Login = () => {
     setTimeout(() => {
       if (username === 'admin' && password === 'password') {
         console.log('Login successful');
+        setLogin(true);
       } else {
         setError('Invalid username or password');
       }
@@ -21,6 +24,9 @@ const Login = () => {
     }, 1000);
   };
 
+  if (logedin) {
+    return <TravelRequestForm/>
+  }
   return (
     <div>
       <h1>Login</h1>
@@ -38,6 +44,7 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button label={loading ? 'Loading...' : 'Submit'} onClick={handleSubmit} />
+      <a href={'/A01027920/Home.html'} className='buttonlink'>Go to Home</a>
     </div>
   );
 };
