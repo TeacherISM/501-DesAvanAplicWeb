@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 14, 14);
+  }
+  h1{
+    color:rgb(155, 159, 209)
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+  }
+  
+  .row {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    border: 1px solid rgb(79, 84, 142);
+    background-color: rgb(26, 27, 42);
+    color: rgba(70, 82, 220, 0.767);
+    border-radius: 8px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+  
+  ul {
+    list-style-position: inside; 
+    padding: 0;
+    margin: 0 auto;
+    text-align: left; 
+    display: inline-block; 
+  }
+  
+  li {
+    margin: 8px 0;
+  }
+
+  .back-to {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color:rgb(45, 52, 123);
+    color: rgb(155, 159, 209);
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .back-to:hover {
+    background-color:  rgb(155, 159, 209);
+    color: rgb(45, 52, 123);
+  }
+  
