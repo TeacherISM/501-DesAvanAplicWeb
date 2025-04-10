@@ -44,7 +44,8 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button label={loading ? 'Loading...' : 'Submit'} onClick={handleSubmit} />
-      <a href={'/A01027920/Home.html'} className='buttonlink'>Go to Home</a>
+      <br></br>
+      <a href='/A01027920/Home.html' className='buttonlink'>Regresar a menu</a>
     </div>
   );
 };

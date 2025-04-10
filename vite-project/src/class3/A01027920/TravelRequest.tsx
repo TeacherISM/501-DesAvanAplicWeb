@@ -77,7 +77,8 @@ const TravelRequestForm = () => {
  onChange={(e) => handleChange('purpose', e.target.value)}
  />
  <button onClick={handleSubmit}>Submit</button>
- <a href={'/A01027920/Home.html'} className='buttonlink'>Go to Home</a>
+ <br></br>
+ <a href='/A01027920/Home.html' className='buttonlink'>Regresar a menu</a>
  </div>
  );
 };
