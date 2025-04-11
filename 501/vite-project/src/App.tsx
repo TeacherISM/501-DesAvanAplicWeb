@@ -21,6 +21,11 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <div>
+        <a href="/public/A01027913/Menu.html">
+          <button>Menu</button>
+        </a>
+      </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -28,6 +33,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      
     </>
   )
 }
