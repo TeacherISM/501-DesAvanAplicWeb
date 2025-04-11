@@ -14,9 +14,21 @@ function App() {
   if (view === 'menu') {
     return(
       <>
-      <h1>Menu</h1>
-      <button onClick = {()=> setView('login')}>Login</button>
-      <button onClick = {()=> setView('travelRequest')}>Travel request</button>      
+        <h1 className="text-2xl font-bold mb-4">Menú</h1>
+        <div className="space-x-4">
+          <button
+            onClick={() => setView('login')}
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            Login
+          </button>
+          <button
+            onClick={() => setView('travelRequest')}
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+          >
+            Travel Request
+          </button>
+        </div>
       </>
     )
   }
