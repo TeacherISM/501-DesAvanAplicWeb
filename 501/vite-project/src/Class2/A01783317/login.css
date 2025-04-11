@@ -117,3 +117,18 @@
 .login-page button:hover {
   background-color: #f0f0f0;
 }
+.return-button {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
