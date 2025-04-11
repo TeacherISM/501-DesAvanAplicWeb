@@ -6,10 +6,11 @@ import './App.css';
 // Imports from class files
 import RenderImage from './class1/A01784217/class1';
 import { Button, Login } from './class2/A01784217/class2';
-import Class3 from './class3/A01784217/class3';
+import Class3 from './class3/A01784217/class3'; 
+import { TravelRequestList } from './class4/A01784217/class4'; 
 
 function App() {
-    const [currentPage, setCurrentPage] = useState<'home' | 'login' | 'class3'>('home');
+    const [currentPage, setCurrentPage] = useState<'home' | 'login' | 'class3' | 'travel'>('home');
 
     const goToLogin = () => {
         setCurrentPage('login');
@@ -21,6 +22,10 @@ function App() {
 
     const goToClass3 = () => {
         setCurrentPage('class3');
+    };
+
+    const goToTravel = () => {
+        setCurrentPage('travel');
     };
 
     return (
@@ -58,11 +63,13 @@ function App() {
                     <div>
                         <Button label="Go to Login" onClick={goToLogin} />
                         <Button label="Go to Counter" onClick={goToClass3} />
+                        <Button label="Go to Travel Requests" onClick={goToTravel} />
                     </div>
                 </div>
             )}
             {currentPage === 'login' && <Login onBack={goToHome} />}
             {currentPage === 'class3' && <Class3 onBack={goToHome} />}
+            {currentPage === 'travel' && <TravelRequestList onBack={goToHome} />}
         </>
     );
 }
