@@ -1,5 +1,7 @@
-A01025317
+# Desarrollo avanzado de aplicaciones web
 
-# 501-DesAvanAplicWeb
-501 - Desarrollo Avanzado de Aplicaciones Web
+--------------------
+* A01028889 - Ricardo Calvo
+* A01781041 - Michael Devlyn
+
 

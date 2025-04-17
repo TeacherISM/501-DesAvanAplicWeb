@@ -1,0 +1,72 @@
+.slot-machine {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 400px;
+}
+
+.slot-machine-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.slot-machine-symbols {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.slot-machine-symbol {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.slot-machine-message {
+  font-size: 1rem;
+  color: #666;
+}
+
+.slot-machine-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slot-machine-button:hover {
+  background-color: #0056b3;
+}
+
+.slot-machine-result {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.slot-machine-result.win {
+  color: green;
+}
+
+.slot-machine-result.lose {
+  color: red;
+}
+
+.slot-machine-image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dog-image {
+  object-fit: cover;
+  height: 200px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

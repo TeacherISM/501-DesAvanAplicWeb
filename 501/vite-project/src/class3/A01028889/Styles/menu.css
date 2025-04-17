@@ -1,0 +1,45 @@
+/* Dark theme for the menu */
+body {
+  /* Centrando con Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Altura completa de la ventana */
+  margin: 0;
+  /* Quitar márgenes por defecto */
+}
+
+
+.menu-container {
+  height: 350px;
+  width: 100%;
+  background-color: gainsboro;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: black
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 5px;
+}
+
+.menu-list li:last-child {
+  margin-bottom: 0;
+}
