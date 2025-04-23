@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 1: Guess Game</title>
+  <style>
+    .game-container { max-width: 600px; margin: 30px auto; padding: 24px; border: 1px solid #ccc; border-radius: 14px; background: #fafaff; }
+    .options button { margin: 0 6px; }
+    .feedback { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Selecciona el tamaño de la frase</h1>
+    <h2>🎲 ¿Corta o Larga?</h2>
+    <p><strong>Frase:</strong></p>
+    <blockquote id="frase-random"></blockquote>
+    <div class="options">
+      <button onclick="setGuess('corta')">corta</button>
+      <button onclick="setGuess('larga')">larga</button>
+    </div>
+    <button onclick="checkGuess()">Verificar</button>
+    <p id="feedback" class="feedback"></p>
+    <!-- Botón para volver al menú -->
+    <a href="menu.html"><button>Regresar al menú</button></a>
+  </div>
+  <script>
+    const frases = [
+      'SUELTENME!!!!!',
+      'Ya me quiero ir',
+      'Hoy vamos a rumbear o no?',
+      'Wacho, eres malisimo',
+      'La mejor bebida del cine es el Ice de Venom',
+      'Wukong',
+      'Mezcal o Vodka',
+      'Ya se necesitan unas vacaciones y dormir',
+      'Vete a dormir',
+      'Medicate, por favor'
+    ];
+
+    let randomPhrase = "";
+    let guess = "";
+
+    function randomizePhrase() {
+      const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+      document.getElementById("frase-random").textContent = fraseAleatoria;
+      randomPhrase = fraseAleatoria;
+    }
+
+    function setGuess(tipo) {
+      guess = tipo;
+    }
+
+    function countWords(str) {
+      return str.trim().split(/\s+/).length;
+    }
+
+    function checkGuess() {
+      if (!guess) {
+        document.getElementById("feedback").textContent = "Selecciona 'corta' o 'larga'.";
+        return;
+      }
+      const length = countWords(randomPhrase);
+      const actual = length > 5 ? 'larga' : 'corta';
+
+      if (guess === actual) {
+        document.getElementById("feedback").textContent = "¡Correcto! Redirigiendo... 🎉";
+        setTimeout(() => {
+          window.location.href = "/demo";  // Ruta React (Demo.tsx)
+        }, 2000);
+      } else {
+        document.getElementById("feedback").textContent = `GG F, la frase era ${actual}. ¡Intenta de nuevo!`;
+      }
+    }
+
+    window.onload = randomizePhrase;
+  </script>
+</body>
+</html>

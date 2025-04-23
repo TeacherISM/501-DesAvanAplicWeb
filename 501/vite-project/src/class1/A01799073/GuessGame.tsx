@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import kahootMusic from '../../../assets/kahoot.mp3';
-import BackToMenu from '../../../components/BackMenu';
+import BackToMenu from '../../class3/A01799073/components/BackMenu';
 import '../../../styles/guessGame.css';
 
 const frases = [

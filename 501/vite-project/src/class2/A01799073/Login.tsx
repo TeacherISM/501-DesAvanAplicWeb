@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import InputField from '../components/InputFIeld';
-import Button from '../components/Buttons';
+import InputField from './components/InputFIeld';
+import Button from './components/Buttons';
 import { useNavigate } from 'react-router-dom';
-import BackToMenu from '../../../components/BackMenu';
+import BackToMenu from '../../class3/A01799073/components/BackMenu';
 
 
 interface LoginProps {

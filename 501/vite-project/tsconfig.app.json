@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "src/class3/A01799073/components/BackMenu.tsx", "public/A01799073/Menu.tsx"]
 }

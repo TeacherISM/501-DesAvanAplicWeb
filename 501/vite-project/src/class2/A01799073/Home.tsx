@@ -1,5 +1,5 @@
 import * as React from 'react';
-import BackToMenu from '../../../components/BackMenu';
+import BackToMenu from '../../class3/A01799073/components/BackMenu';
 
 const Home: React.FC = () => {
   return (
