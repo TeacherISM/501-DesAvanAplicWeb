@@ -1,26 +1,14 @@
-
-// In src/App.tsx
-
+// src/App.tsx
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Login from './Class2/A01783317/login'
-import GreetPage from './class1/A01783317/GreetButton';
-import UseReducerDemo from './class3/a01783317/hook'; // Import your new component
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  
-  const [showLogin, setShowLogin] = useState(false);
-  if (showLogin) {
-    return <Login />;
-  }
+  const [count, setCount] = useState(0)
 
   return (
-main
     <Router>
       <Routes>
         <Route
@@ -37,7 +25,7 @@ main
               </div>
               <h1>Vite + React</h1>
               <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
+                <button onClick={() => setCount(count + 1)}>
                   count is {count}
                 </button>
                 <p>
@@ -55,13 +43,9 @@ main
             </>
           }
         />
-        <Route path="/greet" element={<GreetPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/reducer" element={<UseReducerDemo />} /> {/* Add new route */}
       </Routes>
     </Router>
   )
-
 }
 
 export default App
