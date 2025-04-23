@@ -1,3 +1,4 @@
+
 // In src/App.tsx
 
 import { useState } from 'react'
@@ -10,9 +11,16 @@ import GreetPage from './class1/A01783317/GreetButton';
 import UseReducerDemo from './class3/a01783317/hook'; // Import your new component
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  
+  const [showLogin, setShowLogin] = useState(false);
+  if (showLogin) {
+    return <Login />;
+  }
 
   return (
+main
     <Router>
       <Routes>
         <Route
@@ -53,6 +61,7 @@ function App() {
       </Routes>
     </Router>
   )
+
 }
 
 export default App
