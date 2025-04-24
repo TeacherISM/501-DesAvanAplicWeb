@@ -2,15 +2,17 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Login from "./class2/A01028517/login";
+import Login from "./class2/A01799073/Login";
 
 function App() {
   const [count, setCount] = useState(0);
 
   
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin] = useState(false);
   if (showLogin) {
-    return <Login />;
+    return <Login onLogin={function (): void {
+      throw new Error("Function not implemented.");
+    } } />;
   }
 
   return (
@@ -45,6 +47,7 @@ function App() {
       <div>
         <a href="/src/class1/A01027983/">
           <button>A01027983</button>
+        </a>
         <a href='../src/class3/A01029143/pages/Menu.html'>
           Menu A01029143
         </a>
@@ -52,6 +55,11 @@ function App() {
       <a href="/public/A01028418/menu.html">
         <button>A01028418</button>
       </a>
+      <div>
+      <a href="src/class3/A01799073/new_home.html">
+        <button>Menu (A01799073)</button>
+      </a>
+    </div>
     </>
   );
 }
