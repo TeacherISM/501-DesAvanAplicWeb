@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import kahootMusic from '../../../assets/kahoot.mp3';
+import Demo from './Demo';
+import kahootMusic from './assets/kahoot.mp3';
 import BackToMenu from '../../class3/A01799073/components/BackMenu';
-import '../../../styles/guessGame.css';
 
 const frases = [
   'SUELTENME!!!!!',
@@ -21,7 +20,7 @@ const GuessGame: React.FC = () => {
   const [randomPhrase, setRandomPhrase] = useState('');
   const [guess, setGuess] = useState<'corta' | 'larga' | ''>('');
   const [feedback, setFeedback] = useState('');
-  const navigate = useNavigate();
+  const [showDemo, setShowDemo] = useState(false);
 
   useEffect(() => {
     const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
@@ -36,13 +35,15 @@ const GuessGame: React.FC = () => {
 
     if (guess === actual) {
         setFeedback('¡Correcto! Redirigiendo... 🎉');
-        setTimeout(() => {
-            navigate('/video');
-        }, 3000);
+        setTimeout(() => setShowDemo(true), 3000);
     } else {
         setFeedback(`GG F, la frase era ${actual}. ¡Intenta de nuevo!`);
     }
   };
+
+  if (showDemo) {
+    return <Demo />;
+  }
 
   return (
     <div className="game-container">
@@ -65,7 +66,6 @@ const GuessGame: React.FC = () => {
         </audio>
 
         <BackToMenu/>
-
     </div>
   );
 };

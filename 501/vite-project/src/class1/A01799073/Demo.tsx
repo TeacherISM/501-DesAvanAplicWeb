@@ -1,7 +1,6 @@
 import * as React from 'react';
 import BackToMenu from '../../class3/A01799073/components/BackMenu';
-import video from '../../../src/class1/A01799073/assets/Squirtle_sax.mp4'
-import '../../../styles/demoStyle.css';
+import video from './assets/Squirtle_sax.mp4'
 
 const Demo: React.FC = () => {
     return (

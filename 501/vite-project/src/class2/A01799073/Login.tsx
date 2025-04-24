@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import InputField from './components/InputFIeld';
 import Button from './components/Buttons';
-import { useNavigate } from 'react-router-dom';
 import BackToMenu from '../../class3/A01799073/components/BackMenu';
 
 
@@ -12,15 +11,11 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
 
   const handleSubmit = () => {
     if (username && password) {
-      console.log('Username:', username);
-      console.log('Password:', password);
       onLogin();
-      navigate('/home')
     } else {
       alert('Por favor, rellene los campos disponibles');
     }
@@ -44,9 +39,9 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         />
         <Button label="Submit" onClick={handleSubmit} />
       </div>
+      <BackToMenu/>
     </div>
   );
-  <BackToMenu/>
 };
 
 export default Login;

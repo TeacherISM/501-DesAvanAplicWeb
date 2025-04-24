@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin] = useState(false);
   if (showLogin) {
     return <Login onLogin={function (): void {
       throw new Error("Function not implemented.");
@@ -56,7 +56,7 @@ function App() {
         <button>A01028418</button>
       </a>
       <div>
-      <a href="/src/new_Menu">
+      <a href="src/class3/A01799073/new_home.html">
         <button>Menu (A01799073)</button>
       </a>
     </div>

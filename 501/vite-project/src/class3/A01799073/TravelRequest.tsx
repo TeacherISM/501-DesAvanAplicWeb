@@ -1,6 +1,8 @@
 import { useReducer } from 'react';
-import { useNavigate } from 'react-router-dom';
 
+interface TravelRequestFormProps {
+  onSuccess: () => void;
+}
 
 type State = {
   destination: string;
@@ -31,9 +33,8 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-const TravelRequestForm: React.FC = () => {
+const TravelRequestForm: React.FC<TravelRequestFormProps> = ({ onSuccess }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const navigate = useNavigate();
 
   const handleChange = (field: keyof State, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
@@ -46,9 +47,7 @@ const TravelRequestForm: React.FC = () => {
       alert('Por favor, llena todos los campos antes de continuar.');
       return;
     }
-    
-    console.log('Travel Request:', state);
-    navigate('/home'); 
+    onSuccess(); 
   };
 
   return (
