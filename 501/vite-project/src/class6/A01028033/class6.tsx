@@ -50,18 +50,36 @@ const Dashboard = () => {
         <div className="dashboard-section">
           <h3>Employee View</h3>
           <p>Submitted Travel Requests</p>
+          <ul>
+            <li>Trip to San Francisco - Pending</li>
+            <li>Conference in New York - Approved</li>
+            <li>Client Meeting in Chicago - Rejected</li>
+          </ul>
         </div>
       )}
       {user.role === 'manager' && (
         <div className="dashboard-section">
           <h3>Manager View</h3>
           <p>Pending Travel Requests</p>
+          <ul>
+            <li>John Doe - Trip to Seattle</li>
+            <li>Jane Smith - Conference in Boston</li>
+            <li>Mike Johnson - Client Visit in Austin</li>
+          </ul>
+          <button>Approve Selected</button>
         </div>
       )}
       {user.role === 'admin' && (
         <div className="dashboard-section">
           <h3>Admin View</h3>
           <p>User Management</p>
+          <ul>
+            <li>Total Users: 42</li>
+            <li>Active Employees: 28</li>
+            <li>Active Managers: 10</li>
+            <li>System Admins: 4</li>
+          </ul>
+          <button>Add New User</button>
         </div>
       )}
     </div>
@@ -104,7 +122,7 @@ const RoleSelector = () => {
 const Class6 = () => {
   return (
     <div className="class6-container">
-      <h1>Task 3: React Context API for User Roles</h1>
+      <h1>React Context API for User Roles</h1>
       <UserProvider>
         <RoleSelector />
         <Dashboard />
