@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import InputField from '../../class2/A01028418/components/InputField';
 import Button from '../../class2/A01028418/components/Button';
+import './styles/expenseform.css'
 
 const ExpenseForm: React.FC = () => {
   const [amount, setAmount] = useState<string>('');
@@ -13,6 +14,14 @@ const ExpenseForm: React.FC = () => {
 
   return (
     <>
+      <div>
+        <a href="/">
+          <button>Página Inicial</button>
+        </a>
+        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html">
+          <button>Menú Milestone 2</button>
+        </a>
+      </div>
       <div className="p-4">
         <h1 className="text-2xl font-bold mb-4">Expense Form</h1>
         <InputField
@@ -34,14 +43,6 @@ const ExpenseForm: React.FC = () => {
           className="p-2 border rounded w-full"
         />
         <Button label="Submit" onClick={handleSubmit} />
-      </div>
-      <div>
-        <a href="/">
-          <button>Página Inicial</button>
-        </a>
-        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html">
-          <button>Menú Milestone 2</button>
-        </a>
       </div>
     </>
   );
