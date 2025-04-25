@@ -43,8 +43,8 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <div>
-        <a href="/src/class1/A01027983 and A01784875/">
-          <button>A01027983</button>
+        <a href="/src/class1/A01027983/">
+          <button>A01027983 and A01784875</button>
         </a>
         <a href='../src/class3/A01029143/pages/Menu.html'>
           Menu A01029143
