@@ -1,0 +1,88 @@
+/* Styles for Class 6 - React Context API for User Roles */
+
+.class6-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.class6-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.class6-container h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.class6-container h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.role-selector {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.button-active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #2563eb;
+}
+
+.button-inactive {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.current-role {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.role-value {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.dashboard {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.dashboard-section {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}

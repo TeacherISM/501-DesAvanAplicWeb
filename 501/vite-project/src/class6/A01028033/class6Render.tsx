@@ -1,4 +1,4 @@
-// Script to render the class1 page
+// Script to render the class6 page
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Class6 from "./class6";
