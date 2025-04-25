@@ -73,6 +73,14 @@ const TravelRequestForm = () => {
   return (
     <>
       <main className="form-page">
+      <div>
+        <a href="/">
+          <button style={{ backgroundColor: '#4CAF50', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '8px', cursor: 'pointer', margin: '5px' }}>Página Inicial</button>
+        </a>
+        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html">
+          <button style={{ backgroundColor: '#2196F3', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '8px', cursor: 'pointer', margin: '5px' }}>Menú Milestone 2</button>
+        </a>
+      </div>
         <div className="form-container">
           <h1 className="form-title">Solicitud de Viaje</h1>
           <form onSubmit={handleSubmit} className="form-section">
