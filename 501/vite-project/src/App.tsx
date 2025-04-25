@@ -28,7 +28,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <a href="/public/A01028517/Menú.html"><button>Link menu A01028517</button></a>
+        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html"><button>Link menu A01028517</button></a>
         
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
