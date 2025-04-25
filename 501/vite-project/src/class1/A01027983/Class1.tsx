@@ -12,6 +12,7 @@ function Class1() {
           <Button label="Class1" />
           <Button label="Class2" onClick={() => document.location = "/src/class2/A01027983/"} />
           <Button label="Class3" onClick={() => document.location = "/src/class3/A01027983/"} />
+          <Button label="Milestone2" onClick={() => document.location = "/src/class4/A01027983/"} />
           <Button label="Main Page" onClick={() => document.location= "/"} />
         </div>
       </div>
