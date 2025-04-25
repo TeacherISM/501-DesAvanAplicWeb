@@ -9,11 +9,11 @@ function Class2() {
       <div>
         <h1>Menu</h1>
         <div>
+          <Button label="Main Page" onClick={() => document.location= "/"} />
           <Button label="Class1" onClick={() => document.location = "/src/class1/A01027983/"} />
           <Button label="Class2" />
           <Button label="Class3" onClick={() => document.location = "/src/class3/A01027983/"} />
-          <Button label="Milestone2" onClick={() => document.location = "/src/class4/A01027983/"} />
-          <Button label="Main Page" onClick={() => document.location= "/"} />
+          <Button label="Milestone2" onClick={() => document.location = "/src/class4/A01027983_and_A01784875/"} />
         </div>
       </div>
       <h1>Class 2 Example A01027983</h1>
