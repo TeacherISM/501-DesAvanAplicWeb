@@ -5,7 +5,7 @@ const BackToMenu: React.FC = () => {
         style={{
           marginTop: '20px',
           padding: '10px 20px',
-          backgroundColor: '#2130b8',
+          backgroundColor: '#f2004477',
           color: 'white',
           border: 'none',
           borderRadius: '8px',

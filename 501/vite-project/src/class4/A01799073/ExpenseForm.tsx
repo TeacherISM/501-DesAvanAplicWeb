@@ -8,7 +8,10 @@ const ExpenseForm: React.FC = () => {
   const [description, setDescription] = useState<string>('');
 
   const handleSubmit = () => {
-    console.log('Expense:', { amount, category, description });
+    if (!amount || !category || !description) {
+      alert('Por favor, llena todos los campos.');
+      return;
+    }
   };
 
   return (

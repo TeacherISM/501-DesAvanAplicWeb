@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import InputField from '../../class2/A01799073/components/InputFIeld';
 import Button from '../../class2/A01799073/components/Buttons';
+import BackToMenu from '../../class3/A01799073/components/BackMenu';
+
 
 interface LoginPageProps {
   onSuccess: () => void;
@@ -49,6 +51,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
       />
       <Button label={loading ? 'Loading...' : 'Submit'} onClick={handleSubmit} />
+      <BackToMenu/>
     </div>
   );
 };
