@@ -92,6 +92,9 @@ const RoleSelector = () => {
 
   return (
     <div className="role-selector">
+      <a href="/public/A01028033/menu/milestoneMenu.html">
+        <button>Back to menu</button>
+      </a>
       <h3>Change User Role</h3>
       <div className="button-group">
         <button
