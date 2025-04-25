@@ -6,10 +6,6 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  const openStudentWork = () => {
-    window.open('/michael-devlyn.html', '_blank', 'width=1200, height=800');
-  }
-
   return (
     <>
       <div>
@@ -29,27 +25,10 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-
-      <div className="student-button-container" style={{ marginTop: '30px'}}>
-        <button
-        onClick={openStudentWork}
-        style={{
-          backgroundColor: '#646cff',
-          color: 'white',
-          border: 'none',
-          padding: '12px 24px',
-          borderRadius: '8px',
-          fontSize: '16px',
-          cursor: 'pointer',
-          fontWeight: 'bold'
-        }}
-        >
-        Michael Devlyn - A01781041
-        </button>
-      </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <a href={'/A01781041/Home.html'} className='buttonlink'>A01781041 Menu</a>
     </>
   )
 }

@@ -22,3 +22,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Source code in `src/`, grouped by student ID folders
 - Public assets in `public/`
 - Uses Vite for development and building
+
+## Restrictions
+- Cant edit main.tsx
+- Cant change eny of the configuration 
+- App.tsx can conly be modified to have a button that rederect user to an .html page 
+
+
