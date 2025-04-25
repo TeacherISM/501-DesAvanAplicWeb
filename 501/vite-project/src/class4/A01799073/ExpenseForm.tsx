@@ -6,12 +6,16 @@ const ExpenseForm: React.FC = () => {
   const [amount, setAmount] = useState<string>('');
   const [category, setCategory] = useState<string>('');
   const [description, setDescription] = useState<string>('');
+  const [success, setSuccess] = useState<boolean>(false);
 
   const handleSubmit = () => {
     if (!amount || !category || !description) {
       alert('Por favor, llena todos los campos.');
+      setSuccess(false);
       return;
     }
+    setSuccess(true);
+
   };
 
   return (
@@ -35,7 +39,21 @@ const ExpenseForm: React.FC = () => {
         onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setDescription(e.target.value)}
         className="p-2 border rounded w-full"
       />
+      
       <Button label="Submit" onClick={handleSubmit} />
+      {success && (
+        <div style={{
+          marginTop: "16px",
+          padding: "12px",
+          borderRadius: "8px",
+          color: "#ff1744",
+          background: "#18141e",
+          boxShadow: "0 0 8px #ff1744",
+          textAlign: "center"
+        }}>
+          Tu progreso ha sido un éxito
+        </div>
+      )}
     </div>
   );
 };
