@@ -17,7 +17,7 @@ const Class4 = () => {
 
       <section style={{ marginBottom: "40px" }}>
         <h2>1.2. ExpenseForm</h2>
-        <p>FOrmulario de gastos.</p>
+        <p>Formulario de gastos.</p>
         <ExpenseForm  />
       </section>
 
