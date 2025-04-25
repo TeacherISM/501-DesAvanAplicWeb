@@ -128,7 +128,8 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
-        <button onClick={() => setView('menu')}>Diego Valencia Moreno</button>
+        <p>Natalia Rodríguez Guevara, Enrique Martinez de Velasco Reyna, Diego Ortega Fernández, Diego Valencia Moreno</p>
+        <button onClick={() => setView('menu')}>Go to menu</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
