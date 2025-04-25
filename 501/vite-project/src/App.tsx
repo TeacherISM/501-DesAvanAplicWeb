@@ -2,10 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Login from './class2/A01784568/Login'
+import Login from './class2/a01784568/Login'
 import TravelRequest from './class3/A01784568/TravelRequest'
+import TravelRequestForm from './class4/a01784568/TravelRequestForm'
+import Dashboard from './class4/a01784568/Dashboard'
+import { UserProvider } from './class4/a01784568/UserContext'
+import ExpenseForm from './class4/a01784568/ExpenseForm'
 
-type View = 'home' | 'menu' | 'login' | 'travelRequest';
+
+type View = 'home' | 'menu' | 'login' | 'travelRequest' | 'travelRequestForm' | 'expenseForm' | 'dashboard';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,12 +27,35 @@ function App() {
           >
             Login
           </button>
+
           <button
             onClick={() => setView('travelRequest')}
             className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
           >
             Travel Request
           </button>
+
+          <button
+            onClick={() => setView('travelRequestForm')}
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+          >
+            Travel Request Form
+          </button>
+
+          <button
+            onClick={() => setView('expenseForm')}
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+          >
+            Expense Form
+          </button>
+
+          <button
+            onClick={() => setView('dashboard')}
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+          >
+            Dashboard
+          </button>
+
         </div>
       </>
     )
@@ -50,6 +78,35 @@ function App() {
       <TravelRequest/>
       <button onClick={() => setView('menu')}>Volver al Menú</button>
       </>
+    )
+  }
+
+  if (view === 'travelRequestForm') {
+    return(
+      <>
+      <TravelRequestForm/>
+      <button onClick={() => setView('menu')}>Volver al Menú</button>
+      </>
+    )
+  }
+
+  if (view === 'expenseForm') {
+    return(
+      <>
+      <ExpenseForm/>
+      <button onClick={() => setView('menu')}>Volver al Menú</button>
+      </>
+    )
+  }
+
+  
+    if (view === 'dashboard') {
+    return(
+      <UserProvider>
+        <Dashboard/>
+        <button onClick={() => setView('menu')}>Volver al Menú</button>
+      </UserProvider>
+
     )
   }
 

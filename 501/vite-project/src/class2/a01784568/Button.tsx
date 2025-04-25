@@ -1,13 +1,23 @@
 import React from 'react';
 
-type ButtonProps = {
+interface ButtonProps {
   label: string;
   onClick: () => void;
-};
+}
 
 const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   return (
-    <button onClick={onClick} style={{ padding: '10px 20px', backgroundColor: 'blue', color: 'white' }}>
+    <button
+      onClick={onClick}
+      style={{
+        backgroundColor: '#007bff',
+        color: 'white',
+        padding: '8px 16px',
+        borderRadius: '4px',
+        border: 'none',
+        cursor: 'pointer',
+      }}
+    >
       {label}
     </button>
   );
