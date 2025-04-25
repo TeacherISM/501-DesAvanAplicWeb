@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+
 #class1Div {
   max-width: 1280px;
   margin: 0 auto;
@@ -20,6 +21,27 @@
 }
 
 #class3Div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#class4Div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#class5Div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#class6Div {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;

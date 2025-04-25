@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
+import "/src/A01028033/styles.css";
 
 // Tipamos los valores del formulario
 interface TravelRequestValues {

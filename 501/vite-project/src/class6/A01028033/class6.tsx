@@ -1,6 +1,7 @@
 // Script with the activities of class 6 - React Context API for User Roles
 import { createContext, useState, useContext, ReactNode } from "react";
 import "./styles.css";
+import "/src/A01028033/styles.css";
 
 // Define the user type
 type UserType = {
