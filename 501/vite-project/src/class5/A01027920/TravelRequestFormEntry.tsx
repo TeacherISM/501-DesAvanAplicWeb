@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Login from './LoginPage'
+import TravelRequestForm from './TravelRequestForm'
 
 createRoot(document.getElementById('login-root')!).render(
   <StrictMode>
-    <Login />
+    <TravelRequestForm />
   </StrictMode>,
 )

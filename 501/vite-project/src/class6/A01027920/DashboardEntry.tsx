@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Login from './NewLogin'
+import DashboardWrapper from './DashboardWrapper'
 
 createRoot(document.getElementById('login-root')!).render(
   <StrictMode>
-    <Login />
+    <DashboardWrapper />
   </StrictMode>,
 )
