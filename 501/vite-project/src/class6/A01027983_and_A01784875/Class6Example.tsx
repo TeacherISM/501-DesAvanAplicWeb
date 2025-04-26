@@ -9,7 +9,6 @@ const Class6Example = () => {
 
   return (
     <>
-    <UserProvider>
     <div className="p-4">
       <div>
         <Button label="employee" onClick={() => login('employee')} />
@@ -37,7 +36,6 @@ const Class6Example = () => {
         </div>
       )}
     </div>
-    </UserProvider>
     </>
   );
 };

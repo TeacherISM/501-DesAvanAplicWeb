@@ -11,7 +11,7 @@ type UserContextType = {
 
 export const UserContext = createContext<UserContextType>({
   user: { role: 'employee' },
-  login: () => {},
+  login: () => {console.log("Default log")},
 });
 
 type UserProviderProps = {
@@ -22,6 +22,7 @@ export const UserProvider = ({ children }: UserProviderProps) => {
   const [user, setUser] = useState<UserType>({ role: 'employee' }); // Default role: employee
 
   const login = (role: UserType['role']) => {
+    console.log("Logged in!");
     setUser({ role });
   };
 

@@ -1,5 +1,6 @@
 import Class6Example from "./Class6Example.tsx";
 import Button from "./components/Button.tsx";
+import { UserProvider } from "./components/UserContext.tsx";
 import "./Class6.css"
 
 function Class6() {
@@ -16,7 +17,9 @@ function Class6() {
         </div>
       </div>
       <h1>Class 6 Example A01027983 and A01784875</h1>
-      <Class6Example />
+      <UserProvider>
+        <Class6Example />
+      </UserProvider>
     </>
   )
 }
