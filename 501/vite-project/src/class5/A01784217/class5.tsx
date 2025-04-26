@@ -158,6 +158,14 @@ const TravelRequestForm = () => {
   return (
     <>
       <main className="form-page">
+      <div>
+        <a href="/">
+          <button style={{ backgroundColor: '#4CAF50', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '8px', cursor: 'pointer', margin: '5px' }}>Página Inicial</button>
+        </a>
+        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html">
+          <button style={{ backgroundColor: '#2196F3', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '8px', cursor: 'pointer', margin: '5px' }}>Menú Milestone 2</button>
+        </a>
+      </div>
         <div className="form-container">
             <p>
                 <strong>Nota:</strong> Esta implementación ocupa el formato de la clase 4.1, pero aplica la implementación de Formik + Yup de la clase 5. Para comprobar la funcionalidad, por ejemplo, se puede ingresar una fecha de inicio posterior a la fecha de fin, y se mostrará un mensaje de error.
