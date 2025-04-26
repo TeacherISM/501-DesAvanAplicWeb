@@ -1,13 +1,21 @@
 import { useContext } from 'react';
-import { UserContext } from './components/UserContext.tsx';
+import { UserContext, UserProvider } from './components/UserContext.tsx';
 import TravelRequestForm from './components/TravelRequestForm.tsx';
 import ExpenseForm from './components/ExpenseForm.tsx';
+import Button from './components/Button.tsx';
 
 const Class6Example = () => {
   const { user, login } = useContext(UserContext);
 
   return (
+    <>
+    <UserProvider>
     <div className="p-4">
+      <div>
+        <Button label="employee" onClick={() => login('employee')} />
+        <Button label="manager" onClick={() => login('manager')} />
+        <Button label="admin" onClick={() => login('admin')} />
+      </div>
       <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
       {user.role === 'employee' && (
         <div>
@@ -29,6 +37,8 @@ const Class6Example = () => {
         </div>
       )}
     </div>
+    </UserProvider>
+    </>
   );
 };
 

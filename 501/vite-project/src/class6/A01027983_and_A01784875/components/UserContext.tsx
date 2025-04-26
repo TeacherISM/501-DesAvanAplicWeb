@@ -1,14 +1,27 @@
 import React, { createContext, useState } from 'react';
 
-export const UserContext = createContext({
-    user: { role: 'employee' },
-    login: () => {},
+type UserType = {
+  role: 'employee' | 'manager' | 'admin';
+};
+
+type UserContextType = {
+  user: UserType;
+  login: (role: UserType['role']) => void;
+};
+
+export const UserContext = createContext<UserContextType>({
+  user: { role: 'employee' },
+  login: () => {},
 });
 
-export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({ role: 'employee' }); // Default role: employee
+type UserProviderProps = {
+  children: ReactNode;
+};
 
-  const login = (role) => {
+export const UserProvider = ({ children }: UserProviderProps) => {
+  const [user, setUser] = useState<UserType>({ role: 'employee' }); // Default role: employee
+
+  const login = (role: UserType['role']) => {
     setUser({ role });
   };
 
