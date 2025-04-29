@@ -7,6 +7,12 @@ import Login from "./class2/A01028517/login";
 function App() {
   const [count, setCount] = useState(0);
 
+  
+  const [showLogin, setShowLogin] = useState(false);
+  if (showLogin) {
+    return <Login />;
+  }
+
   return (
     <>
       <div>
@@ -28,7 +34,7 @@ function App() {
             <button>Menu</button>
           </a>
         </div>
-        <a href="/public/A01028517/Menú.html"><button>Link menu A01028517</button></a>
+        <a href="/public/A01028517/Men¬ú.html"><button>Link menu A01028517</button></a>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -42,6 +48,9 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <div>
+        <a href="/src/class1/A01027983/">
+          <button>A01027983</button>
+        </a>
         <a href='../src/class3/A01029143/pages/Menu.html'>
           Menu A01029143
         </a>
