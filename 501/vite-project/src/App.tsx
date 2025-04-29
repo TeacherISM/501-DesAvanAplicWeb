@@ -3,10 +3,6 @@ import viteLogo from '/vite.svg';
 import './App.css';
 
 function App() {
-  const handleRedirect = () => {
-    window.location.href = '/A01027743/menu.html';
-  };
-
   return (
     <>
       <div>
@@ -20,9 +16,9 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <div className="botton-container">
-          <button onClick={handleRedirect}>
+          <a href="/A01027743/menu.html" className="button-link">
             A01027743
-        </button>
+          </a>
         </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
