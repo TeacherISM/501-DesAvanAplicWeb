@@ -1,7 +1,7 @@
 import React from 'react';
 import { useUser, UserRole } from './UserContext';
 
-// Permission-based component that only renders if user has required permission
+// Permission-based component that only renders if user has required permission (or role)
 const PermissionGuard: React.FC<{
   permission: string;
   children: React.ReactNode;
