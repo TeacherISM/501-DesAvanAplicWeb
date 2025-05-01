@@ -42,16 +42,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <div>
-        <a href="/src/class1/A01027983/">
-          <button>A01027983</button>
-        <a href='../src/class3/A01029143/pages/Menu.html'>
-          Menu A01029143
-        </a>
-      </div>
-      <a href="/public/A01028418/menu.html">
-        <button>A01028418</button>
-      </a>
+      <a href={'/A01781041/Home.html'} className='buttonlink'>A01781041 Menu</a>
     </>
   );
 }
