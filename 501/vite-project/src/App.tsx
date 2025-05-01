@@ -27,6 +27,7 @@ function App() {
         </button>
         <a href="/public/A01028517/Menú.html"><button>Link menu A01028517</button></a>
         <a href="/public/A01028517/Milestone2/Milestone2_Menu.html"><button>Link menu Milestone2</button></a>
+        <a href="/public/A01028517/Milestone3/Milestone3_Menu.html"><button>Link menu Milestone3</button></a>
 
         
         <p>
