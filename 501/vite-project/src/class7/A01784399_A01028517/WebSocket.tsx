@@ -9,9 +9,15 @@ const RealTimeNotifications: React.FC = () => {
     const socket = new WebSocket('ws://localhost:8080');
     setWs(socket);
 
-    socket.onmessage = (event: MessageEvent) => {
-      const receivedMessage = event.data as string;
-      setNotifications((prevNotifications) => [...prevNotifications, receivedMessage]);
+    socket.onmessage = async (event) => {
+      const data = event.data;
+    
+      if (data instanceof Blob) {
+        const text = await data.text(); // Convierte Blob a string
+        setNotifications((prev) => [...prev, text]);
+      } else {
+        setNotifications((prev) => [...prev, String(data)]);
+      }
     };
 
     return () => {
@@ -29,11 +35,11 @@ const RealTimeNotifications: React.FC = () => {
   return (
     <div>
       <h2>Real-Time Notifications</h2>
-      <ul>
+      <p>
         {notifications.map((notification, index) => (
           <li key={index}>{notification}</li>
         ))}
-      </ul>
+      </p>
       <div>
         <input
           type="text"
