@@ -13,6 +13,7 @@ function Class4() {
           <Button label="Class4" />
           <Button label="Class5" onClick={() => document.location = "/src/class5/A01027983_and_A01784875/"} />
           <Button label="Class6" onClick={() => document.location = "/src/class6/A01027983_and_A01784875/"} />
+          <Button label="Milestone3" onClick={() => document.location = "/src/class7/A01027983_and_A01784875/"} />
         </div>
       </div>
       <h1>Class 4 Example A01027983 and A01784875</h1>
