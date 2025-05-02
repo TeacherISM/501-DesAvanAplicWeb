@@ -7,7 +7,7 @@ import Login from "./class2/A01028517/login";
 function App() {
   const [count, setCount] = useState(0);
 
-  
+
   const [showLogin, setShowLogin] = useState(false);
   if (showLogin) {
     return <Login />;
@@ -61,6 +61,7 @@ function App() {
       <a href="/public/A01028418/menu.html">
         <button>A01028418</button>
       </a>
+      <a href={'/A01027920/Home.html'} className='buttonlink'>A01027920 Menu</a>
     </>
   );
 }
