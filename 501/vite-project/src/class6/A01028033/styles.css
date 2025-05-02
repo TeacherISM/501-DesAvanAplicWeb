@@ -1,0 +1,112 @@
+/* Styles for Class 6 - React Context API for User Roles - Dark Theme */
+
+.class6-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.class6-container h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #bb86fc; /* Purple accent */
+  width: 100%;
+  text-align: center;
+}
+
+.class6-container h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #03dac6; /* Teal accent */
+  width: 100%;
+  text-align: center;
+}
+
+.class6-container h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #cf6679; /* Pink accent */
+}
+
+.role-selector {
+  margin-bottom: 24px;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  width: 90%;
+  max-width: 600px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.button-active {
+  background-color: #6200ee; /* Deep purple */
+  color: white;
+  border-color: #3700b3;
+  box-shadow: 0 2px 8px rgba(98, 0, 238, 0.4);
+}
+
+.button-inactive {
+  background-color: #333333;
+  color: #b0b0b0;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.current-role {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #b0b0b0;
+}
+
+.role-value {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #03dac6; /* Teal accent */
+}
+
+.dashboard {
+  padding: 24px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  width: 90%;
+  max-width: 600px;
+}
+
+.dashboard-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: #3d3d3d;
+  border-radius: 6px;
+  border-left: 4px solid #03dac6; /* Teal accent */
+}
