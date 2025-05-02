@@ -1,0 +1,94 @@
+/* Dark theme for the menu */
+body {
+  /* Centrando con Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Altura completa de la ventana */
+  margin: 0;
+  /* Quitar márgenes por defecto */
+}
+
+
+.menu-container {
+  min-height: 350px;
+  width: 100%;
+  background-color: gainsboro;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: black
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 5px;
+}
+
+.menu-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* General menu styling */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.menu button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Active button styling */
+.menu button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu button {
+    width: 100%;
+    text-align: center;
+  }
+}

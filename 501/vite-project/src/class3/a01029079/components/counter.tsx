@@ -58,7 +58,7 @@ const AdvancedCounter: React.FC = () => {
         <button className="btn" onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
         <button className="btn" onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
         <button className="btn" onClick={() => dispatch({ type: 'CLEAR_HISTORY' })}>Clear History</button>
-        <a href="../../../../../src/class3/a01029079/public/menu.html" className='btn'> Return </a>
+        <a href="../../../../../src/class3/a01029079/public/menu1.html" className='btn'> Return </a>
       </div>
       <h3 className="history-title">Historial</h3>
       {state.history.length === 0 ? (

@@ -36,7 +36,7 @@ const LoginPage: React.FC = () => {
           <Button text="Entrar" onClick={handleSubmit} type="submit" />
         </div>
         <div>
-        <a href="../../../../../src/class3/a01029079/public/menu.html" className='btn'> Return </a>
+        <a href="../../../../../src/class3/a01029079/public/menu1.html" className='btn'> Return </a>
         </div>
       </form>
     </div>
