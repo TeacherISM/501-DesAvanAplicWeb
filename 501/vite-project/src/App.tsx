@@ -26,8 +26,8 @@ function App() {
       <h1>Vite + React</h1>
       <a href="../src/class3/a01029079/public/menu.html">A01029079</a>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => window.location.href = '/A01028796/menu.html'}>
+          Ir al menú
         </button>
         <div>
           <a href="/public/A01027913/Menu.html">
