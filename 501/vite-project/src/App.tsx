@@ -1,113 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './class2/a01784568/Login'
-import TravelRequest from './class3/A01784568/TravelRequest'
-import TravelRequestForm from './class4/a01784568/TravelRequestForm'
-import Dashboard from './class4/a01784568/Dashboard'
-import { UserProvider } from './class4/a01784568/UserContext'
-import ExpenseForm from './class4/a01784568/ExpenseForm'
-
-
-type View = 'home' | 'menu' | 'login' | 'travelRequest' | 'travelRequestForm' | 'expenseForm' | 'dashboard';
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Login from "./class2/A01028517/login";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [view, setView] = useState<View>('home');
-
-  if (view === 'menu') {
-    return(
-      <>
-        <h1 className="text-2xl font-bold mb-4">Menú</h1>
-        <div className="space-x-4">
-          <button
-            onClick={() => setView('login')}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-          >
-            Login
-          </button>
-
-          <button
-            onClick={() => setView('travelRequest')}
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-          >
-            Travel Request
-          </button>
-
-          <button
-            onClick={() => setView('travelRequestForm')}
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-          >
-            Travel Request Form
-          </button>
-
-          <button
-            onClick={() => setView('expenseForm')}
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-          >
-            Expense Form
-          </button>
-
-          <button
-            onClick={() => setView('dashboard')}
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-          >
-            Dashboard
-          </button>
-
-        </div>
-      </>
-    )
-  }
-
-  if (view === 'login') {
-    return(
-      <>
-      <Login/>
-      <button onClick={() => setView('menu')}>Regresar</button>
-        
-      
-      </>
-    )
-  }
-
-  if (view === 'travelRequest') {
-    return(
-      <>
-      <TravelRequest/>
-      <button onClick={() => setView('menu')}>Volver al Menú</button>
-      </>
-    )
-  }
-
-  if (view === 'travelRequestForm') {
-    return(
-      <>
-      <TravelRequestForm/>
-      <button onClick={() => setView('menu')}>Volver al Menú</button>
-      </>
-    )
-  }
-
-  if (view === 'expenseForm') {
-    return(
-      <>
-      <ExpenseForm/>
-      <button onClick={() => setView('menu')}>Volver al Menú</button>
-      </>
-    )
-  }
+  const [count, setCount] = useState(0);
 
   
-    if (view === 'dashboard') {
-    return(
-      <UserProvider>
-        <Dashboard/>
-        <button onClick={() => setView('menu')}>Volver al Menú</button>
-      </UserProvider>
-
-    )
+  const [showLogin, setShowLogin] = useState(false);
+  if (showLogin) {
+    return <Login />;
   }
 
   return (
@@ -121,21 +24,40 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <a href="../src/class3/a01029079/public/menu.html">A01029079</a>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => window.location.href = '/A01028796/menu.html'}>
+          Ir al menú
         </button>
+        <div>
+          <a href="/public/A01027913/Menu.html">
+            <button>Menu</button>
+          </a>
+        </div>
+        <a href="/public/A01028517/Menú.html"><button>Link menu A01028517</button></a>
+        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html"><button>Link menu Milestone2</button></a>
+
+
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
-        <p>Natalia Rodríguez Guevara, Enrique Martinez de Velasco Reyna, Diego Ortega Fernández, Diego Valencia Moreno</p>
-        <button onClick={() => setView('menu')}>Go to menu</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <a href="/src/class1/A01027983/">
+          <button>A01027983 and A01784875</button>
+        </a>
+        <a href='../src/class3/A01029143/pages/Menu.html'>
+          Menu A01029143
+        </a>
+      </div>
+      <a href="/public/A01028418/menu.html">
+        <button>A01028418</button>
+      </a>
     </>
-  )
+  );
 }
 
 export default App
