@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 
 interface TravelRequestFormProps {
   onSuccess: () => void;
@@ -35,6 +35,7 @@ function reducer(state: State, action: Action): State {
 
 const TravelRequestForm: React.FC<TravelRequestFormProps> = ({ onSuccess }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [errors, setErrors] = useState<string[]>([]);
 
   const handleChange = (field: keyof State, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
@@ -42,38 +43,58 @@ const TravelRequestForm: React.FC<TravelRequestFormProps> = ({ onSuccess }) => {
 
   const handleSubmit = () => {
     const { destination, startDate, endDate, purpose } = state;
-    
-    if (!destination || !startDate || !endDate || !purpose) {
-      alert('Por favor, llena todos los campos antes de continuar.');
+    const newErrors = [];
+
+    if (!destination) newErrors.push('Destination is required');
+    if (!startDate) newErrors.push('Start date is required');
+    if (!endDate) newErrors.push('End date is required');
+    if (!purpose) newErrors.push('Purpose is required');
+
+    if (newErrors.length > 0) {
+      setErrors(newErrors);
       return;
     }
-    onSuccess(); 
+
+    setErrors([]);
+    onSuccess();
   };
 
   return (
     <div>
       <h1>Travel Request Form</h1>
+
+      {/* Mostrar errores */}
+      {errors.map((err, idx) => (
+        <div key={idx} style={{ color: 'red' }}>{err}</div>
+      ))}
+
       <input
         type="text"
         placeholder="Destination"
         value={state.destination}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange('destination', e.target.value)}
+        onChange={(e) => handleChange('destination', e.target.value)}
       />
+
       <input
         type="date"
+        placeholder="Start Date"
         value={state.startDate}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange('startDate', e.target.value)}
+        onChange={(e) => handleChange('startDate', e.target.value)}
       />
+
       <input
         type="date"
+        placeholder="End Date"
         value={state.endDate}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange('endDate', e.target.value)}
+        onChange={(e) => handleChange('endDate', e.target.value)}
       />
+
       <textarea
         placeholder="Purpose"
         value={state.purpose}
-        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleChange('purpose', e.target.value)}
+        onChange={(e) => handleChange('purpose', e.target.value)}
       />
+
       <button onClick={handleSubmit}>Submit</button>
     </div>
   );
