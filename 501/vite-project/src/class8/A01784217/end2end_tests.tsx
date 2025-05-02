@@ -55,13 +55,19 @@ const RBAC = () => {
         </button>
         {error && <p className="error" style={{ color: 'red' }}>{error}</p>}
       </form>
+      <div>
+        <h3>Credenciales de prueba</h3>
+        <p><strong>Usuario con acceso completo:</strong> admin / admin123</p>
+        <p><strong>Usuario con acceso limitado:</strong> user / user123</p>
+        <p><strong>Nota:</strong> Si los tests en Cypress fallan la primera vez que se corren por cuestiones de timeout, volver a cargar los tests manualmente.</p>
+      </div>
 
       <div>
         <a href="/">
           <button style={{ backgroundColor: '#4CAF50', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '8px', cursor: 'pointer', margin: '5px' }}>Página Inicial</button>
         </a>
-        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html">
-          <button style={{ backgroundColor: '#2196F3', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '8px', cursor: 'pointer', margin: '5px' }}>Menú Milestone 2</button>
+        <a href="/public/A01028517/Milestone2/Milestone3_Menu.html">
+          <button style={{ backgroundColor: '#2196F3', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '8px', cursor: 'pointer', margin: '5px' }}>Menú Milestone 3</button>
         </a>
       </div>
     </div>
