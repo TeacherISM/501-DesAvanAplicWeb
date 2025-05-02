@@ -26,8 +26,8 @@ function App() {
       <h1>Vite + React</h1>
       <a href="../src/class3/a01029079/public/menu.html">A01029079</a>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => window.location.href = '/A01028796/menu.html'}>
+          Ir al menú
         </button>
         <div>
           <a href="/public/A01027913/Menu.html">
@@ -35,6 +35,9 @@ function App() {
           </a>
         </div>
         <a href="/public/A01028517/Menú.html"><button>Link menu A01028517</button></a>
+        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html"><button>Link menu Milestone2</button></a>
+
+
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -45,6 +48,7 @@ function App() {
       <div>
         <a href="/src/class1/A01027983/">
           <button>A01027983</button>
+        </a>
         <a href='../src/class3/A01029143/pages/Menu.html'>
           Menu A01029143
         </a>
