@@ -1,10 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App.tsx';
+import Clase3 from './../components/Clase3';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Clase3 />
   </StrictMode>
 )
