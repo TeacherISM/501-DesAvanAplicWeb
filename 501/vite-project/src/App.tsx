@@ -2,16 +2,9 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Login from "./class2/A01028517/login";
 
 function App() {
   const [count, setCount] = useState(0);
-
-  
-  const [showLogin, setShowLogin] = useState(false);
-  if (showLogin) {
-    return <Login />;
-  }
 
   return (
     <>
@@ -24,7 +17,6 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <a href="../src/class3/a01029079/public/menu.html">A01029079</a>
       <div className="card">
         <button onClick={() => window.location.href = '/A01028796/menu.html'}>
           Ir al menú
@@ -60,4 +52,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
