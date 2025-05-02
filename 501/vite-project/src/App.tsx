@@ -35,6 +35,9 @@ function App() {
           </a>
         </div>
         <a href="/public/A01028517/Menú.html"><button>Link menu A01028517</button></a>
+        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html"><button>Link menu Milestone2</button></a>
+
+
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -45,6 +48,7 @@ function App() {
       <div>
         <a href="/src/class1/A01027983/">
           <button>A01027983</button>
+        </a>
         <a href='../src/class3/A01029143/pages/Menu.html'>
           Menu A01029143
         </a>
