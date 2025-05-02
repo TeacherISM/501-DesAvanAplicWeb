@@ -8,9 +8,11 @@ function App() {
   const [count, setCount] = useState(0);
 
   
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin] = useState(false);
   if (showLogin) {
-    return <Login />;
+    return <Login onLogin={function (): void {
+      throw new Error("Function not implemented.");
+    } } />;
   }
 
   return (
@@ -35,9 +37,6 @@ function App() {
           </a>
         </div>
         <a href="/public/A01028517/Menú.html"><button>Link menu A01028517</button></a>
-        <a href="/public/A01028517/Milestone2/Milestone2_Menu.html"><button>Link menu Milestone2</button></a>
-
-
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -56,6 +55,11 @@ function App() {
       <a href="/public/A01028418/menu.html">
         <button>A01028418</button>
       </a>
+      <div>
+      <a href="src/class3/A01799073/new_home.html">
+        <button>Menu (A01799073)</button>
+      </a>
+    </div>
     </>
   );
 }

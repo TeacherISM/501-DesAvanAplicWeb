@@ -1,0 +1,94 @@
+.neon-bg {
+    min-height: 100vh;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .neon-card {
+    background: #1a1a1a;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 24px #f20044, 0 0 6px #222 inset;
+    border: 2px solid #f20044;
+    max-width: 420px;
+    width: 100%;
+    margin: 2rem auto;
+  }
+  
+  
+  .neon-title {
+    color: #f20044;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow:
+    0 0 3px #f20044,
+    0 0 8px #f20044,
+    0 0 20px #910026; 
+  letter-spacing: 2px;
+  }
+  
+  .neon-label {
+    color: #f20044;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    display: block;
+    letter-spacing: 1px;
+  }
+  
+  .neon-input,
+  .neon-textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 0.75rem;
+    border: 2px solid #444;
+    background: #181818;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  
+  .neon-input:focus,
+  .neon-textarea:focus {
+    border: 2px solid #f20044;
+    box-shadow: 0 0 9px #f20044, 0 0 17px #f20044;
+  }
+  
+  .neon-error {
+    color: #f20044;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    margin-top: -0.2rem;
+    text-shadow: 0 0 7px #f20044;
+  }
+  
+  .neon-invalid {
+    border: 2px solid #f20044 !important;
+    box-shadow: 0 0 6px #f20044 !important;
+  }
+  
+  .neon-btn {
+    width: 100%;
+    padding: 0.9rem 0;
+    background: #f20044;
+    color: #fff;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #f20044, 0 0 24px #f20044;
+    transition: background 0.2s, color 0.2s;
+  }
+  .neon-btn:hover {
+    background: #181818;
+    color: #f20044;
+    border: 2px solid #f20044;
+  }
+  
