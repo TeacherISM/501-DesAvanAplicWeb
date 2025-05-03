@@ -12,6 +12,7 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
+import { Placeholder } from 'react-admin';
 
 // Interface defining the shape of our form values
 interface TravelRequestFormValues {
@@ -42,7 +43,7 @@ interface TravelRequestFormValues {
  * - Required field indicators
  * - Validation error display
  */
-const InputField = ({ label, name, type = 'text', required = false }: { label: string; name: string; type?: string; required?: boolean }) => (
+const InputField = ({ label, name, type = 'text', required = false, placeholder }: { label: string; name: string; type?: string; required?: boolean; placeholder?: string }) => (
   <div className="form-group">
     <label className="form-label">
       {label} {required && <span className="required">*</span>}
@@ -53,6 +54,7 @@ const InputField = ({ label, name, type = 'text', required = false }: { label: s
       required={required}
       className="form-input"
       as={type === 'textarea' ? 'textarea' : 'input'}
+      placeholder={placeholder}
     />
     <ErrorMessage name={name} component="div" className="error-message" />
   </div>
@@ -185,12 +187,12 @@ const TravelRequestForm = () => {
                 <section>
                   <h2 className="form-subtitle">1. Destinos y Fechas</h2>
                   <div className="form-grid-2">
-                    <InputField label="País de Origen" name="paísOrigen" required />
-                    <InputField label="Ciudad de Origen" name="ciudadOrigen" required />
-                    <InputField label="País Destino" name="paísDestino" required />
-                    <InputField label="Ciudad Destino" name="ciudadDestino" required />
-                    <InputField label="Fecha Inicio" name="fechaInicio" type="date" required />
-                    <InputField label="Fecha Fin" name="fechaFin" type="date" required />
+                    <InputField label="País de Origen" name="paísOrigen" required placeholder="Introduce el país de origen" />
+                    <InputField label="Ciudad de Origen" name="ciudadOrigen" required placeholder="Introduce la ciudad de origen" />
+                    <InputField label="País Destino" name="paísDestino" required placeholder="Introduce el país destino" />
+                    <InputField label="Ciudad Destino" name="ciudadDestino" required placeholder="Introduce la ciudad destino" />
+                    <InputField label="Fecha Inicio" name="fechaInicio" type="date" required placeholder="Seleccione la fecha de inicio" />
+                    <InputField label="Fecha Fin" name="fechaFin" type="date" required placeholder="Seleccione la fecha de fin" />
                   </div>
                 </section>
 
