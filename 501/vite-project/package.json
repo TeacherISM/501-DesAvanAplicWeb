@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "vitest run --globals --environment jsdom"
   },
   "dependencies": {
     "formik": "^2.4.6",
@@ -16,13 +16,10 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.1",
-    "yup": "^1.6.1",
-    "ws": "^8.18.1"
+    "ws": "^8.18.1",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.27.1",
-    "@babel/preset-react": "^7.27.1",
-    "@babel/preset-typescript": "^7.27.1",
     "@eslint/js": "^9.21.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
