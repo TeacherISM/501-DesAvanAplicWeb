@@ -19,7 +19,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => window.location.href = '/A01028796/menu.html'}>
-          Ir al menú
+          A01028796
         </button>
         <div>
           <a href="/public/A01027913/Menu.html">
